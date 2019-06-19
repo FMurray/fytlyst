@@ -1,0 +1,24 @@
+{
+  "name": "fytlyst",
+  "version": "1.0.0",
+  "description": "find the fitness you want",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FMurray/fytlyst.git"
+  },
+  "keywords": [
+    "fitness",
+    "social",
+    "review"
+  ],
+  "author": "Forrest Murray",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FMurray/fytlyst/issues"
+  },
+  "homepage": "https://github.com/FMurray/fytlyst#readme"
+}

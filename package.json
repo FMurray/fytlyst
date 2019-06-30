@@ -4,7 +4,8 @@
   "description": "find the fitness you want",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "start:mobile": "npm start --prefix ui/react-native"
   },
   "repository": {
     "type": "git",
@@ -20,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/FMurray/fytlyst/issues"
   },
-  "homepage": "https://github.com/FMurray/fytlyst#readme"
+  "homepage": "https://github.com/FMurray/fytlyst#readme",
+  "dependencies": {
+    "react-native": "^0.59.9"
+  }
 }

@@ -6,23 +6,25 @@ import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
 import LinksScreen from '../screens/LinksScreen';
 import SettingsScreen from '../screens/SettingsScreen';
+import GymListScreen from '../screens/GymListScreen';
+import GymDetailsScreen from '../screens/GymDetailsScreen';
 
 const HomeStack = createStackNavigator({
-  Home: HomeScreen,
+	Home: HomeScreen,
 });
 
 HomeStack.navigationOptions = {
-  tabBarLabel: 'Home',
-  tabBarIcon: ({ focused }) => (
-    <TabBarIcon
-      focused={focused}
-      name={
-        Platform.OS === 'ios'
-          ? `ios-information-circle${focused ? '' : '-outline'}`
-          : 'md-information-circle'
-      }
-    />
-  ),
+	tabBarLabel: 'Home',
+	tabBarIcon: ({ focused }) => (
+		<TabBarIcon
+			focused={focused}
+			name={
+					Platform.OS === 'ios'
+					? `ios-information-circle${focused ? '' : '-outline'}`
+					: 'md-information-circle'
+			}
+		/>
+	),
 };
 
 const LinksStack = createStackNavigator({
@@ -53,8 +55,24 @@ SettingsStack.navigationOptions = {
   ),
 };
 
+const GymListStack = createStackNavigator({
+  GymList: GymListScreen,
+  GymDetails: GymDetailsScreen
+});
+
+GymListStack.navigationOptions = {
+	tabBarLabel: 'Gym List',
+	tabBarIcon: ({ focused }) => {
+		<TabBarIcon
+			focused={focused}
+			name={Platform.OS === 'ios' ? 'ios-list' : 'md-list'}
+		/>
+	}
+}
+
 export default createBottomTabNavigator({
-  HomeStack,
+	HomeStack,
+	GymListStack,
   LinksStack,
   SettingsStack,
 });
